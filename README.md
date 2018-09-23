@@ -1,5 +1,5 @@
 # comp-python
-Computation Python inside docker
+Computational Python inside docker
 
 # build image
 docker build -t comp-python .
