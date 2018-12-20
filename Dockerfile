@@ -33,7 +33,7 @@ RUN pip install qiskit keras seaborn scikit-learn scipy numpy pyautogui keras te
 RUN mkdir -p /home/me/notebooks
 
 RUN mkdir -p /home/me/persistent && chmod 777 -R /home/me/persistent
-VOLUME home/me/persistent
+VOLUME /home/me/persistent
 
 RUN jupyter notebook --generate-config --allow-root
 RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'" >> /home/me/.jupyter/jupyter_notebook_config.py
