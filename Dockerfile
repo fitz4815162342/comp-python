@@ -27,7 +27,7 @@ RUN conda update anaconda
 RUN conda update --all
 
 # Install Quantum Information SDK
-RUN pip install qiskit
+RUN pip install qiskit keras seaborn scikit-learn scipy numpy pyautogui keras tensorflow
 
 # Configuring access to Jupyter
 RUN mkdir -p /home/me/notebooks
