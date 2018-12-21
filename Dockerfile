@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 RUN apt-get update && yes|apt-get upgrade && \
     apt-get install -y emacs wget bzip2 git unzip sudo
@@ -46,4 +46,4 @@ RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e541
 EXPOSE 4815
 
 # Run Jupytewr notebook as Docker main process
-CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/home/me/notebooks", "--ip='*'", "--port=4815", "--no-browser"]
+CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/home/me/notebooks", "--ip='0.0.0.0'", "--port=4815", "--no-browser"]
