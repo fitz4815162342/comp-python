@@ -38,7 +38,7 @@ VOLUME home/me/persistent
 RUN jupyter notebook --generate-config --allow-root
 RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'" >> /home/me/.jupyter/jupyter_notebook_config.py
 RUN echo "c.NotebookApp.ip = '0.0.0.0'" >> /home/me/.jupyter/jupyter_notebook_config.py
-RUN echo "c.NotebookApp.allow_remote_access = '*'" >> /home/me/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.allow_remote_access = True" >> /home/me/.jupyter/jupyter_notebook_config.py
 
 # Jupyter listens port: 4815
 EXPOSE 4815
